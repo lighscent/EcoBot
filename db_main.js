@@ -2,10 +2,10 @@ const mariadb = require('mariadb');
 const log = require('./logger');
 
 const db_main = mariadb.createPool({
-    host: process.env.DBHOST,
-    user: process.env.DBUSER,
-    password: process.env.DBPASS,
-    database: process.env.DBNAME,
+    host: process.env.DB_MAIN_HOST,
+    user: process.env.DB_MAIN_USER,
+    password: process.env.DB_MAIN_PASS,
+    database: process.env.DB_MAIN_NAME,
     connectionLimit: 5
 });
 
