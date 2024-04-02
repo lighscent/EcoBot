@@ -1,7 +1,7 @@
 const mariadb = require('mariadb');
 const log = require('./logger');
 
-const db = mariadb.createPool({
+const db_main = mariadb.createPool({
     host: process.env.DBHOST,
     user: process.env.DBUSER,
     password: process.env.DBPASS,
@@ -9,7 +9,7 @@ const db = mariadb.createPool({
     connectionLimit: 5
 });
 
-db.getConnection()
+db_main.getConnection()
     .then(conn => {
         log.db('Connected to database');
         conn.release();
@@ -19,4 +19,5 @@ db.getConnection()
         log.error(err);
     });
 
-module.exports = db;
+
+module.exports = db_main;
