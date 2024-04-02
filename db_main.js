@@ -11,7 +11,7 @@ const db_main = mariadb.createPool({
 
 db_main.getConnection()
     .then(conn => {
-        log.db('Connected to database');
+        log.db('Connected to database ' + process.env.DB_MAIN_NAME);
         conn.release();
     })
     .catch(err => {
