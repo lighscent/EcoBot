@@ -1,0 +1,27 @@
+{
+  "name": "ecobot",
+  "version": "0.0.1",
+  "description": "a discord economy bot made by azukiov",
+  "main": "main.js",
+  "scripts": {
+    "update": "git add . && git commit -m \"just a new commit\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azukiov/EcoBot.git"
+  },
+  "author": "https://github.com/Azukiov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Azukiov/EcoBot/issues"
+  },
+  "homepage": "https://github.com/Azukiov/EcoBot#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "mariadb": "^3.3.0",
+    "path": "^0.12.7",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
