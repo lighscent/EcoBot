@@ -1,12 +1,17 @@
 const djs = require('discord.js');
 const log = require('../logger');
-const db = require('../db_main');
+const db = require('../db.js');
 
 module.exports = {
     name: djs.Events.ClientReady,
     once: true,
     execute(client) {
         try {
+            try {
+                require('../tables.js');
+            } catch (err) {
+                log.error(`Error creating tables for db_main` + err);
+            }
 
             const status = [
                 () => `New economy system!`,

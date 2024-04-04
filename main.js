@@ -3,7 +3,7 @@ const log = require('./logger')
 require('dotenv').config()
 
 
-require('./db_main')
+require('./db.js')
 
 
 require('./handlers/events')
